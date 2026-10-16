@@ -1,0 +1,34 @@
+{
+  "is_durable": {
+    "type": "noul",
+    "instructions": "Would knowing this save time or prevent the same mistake in a future session?"
+  },
+  "is_failure": {
+    "type": "noul",
+    "instructions": "Does this describe an error, failure, or pitfall encountered and how it was resolved?"
+  },
+  "has_secret": {
+    "type": "noul",
+    "instructions": "Does this text contain a password, API key, token, or other credential that must NOT be stored in memory?"
+  },
+  "is_session_scoped": {
+    "type": "noul",
+    "instructions": "Does this instruction or preference explicitly apply only to the current session or task?"
+  },
+  "importance": {
+    "type": "score",
+    "instructions": "How important is it to remember this in long-term memory?",
+    "criteria": ["Trivial", "Low", "Medium", "High", "Critical"]
+  },
+  "target": {
+    "type": "choice",
+    "instructions": "Which memory category does this belong to?",
+    "criteria": {
+      "user": "Who the user is, preferences, communication style",
+      "memory": "Environment facts, global learnings",
+      "project": "Project-specific conventions, decisions and quirks",
+      "failure": "Failures, errors, corrections, lessons learned and tool quirks",
+      "none": "Nothing worth saving"
+    }
+  }
+}

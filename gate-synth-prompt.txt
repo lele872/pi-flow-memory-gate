@@ -1,0 +1,14 @@
+The following conversation excerpt contains one or more distinct durable facts. Extract each one as a separate memory entry.
+Rules:
+- one line per memory entry, format: [category] text
+- category is exactly one of: user, memory, project, failure
+- 1 sentence per entry, plain text, no markdown, no quotes
+- keep concrete details (paths, commands, names, versions, constraints)
+- drop corrections framing, greetings, temporary instructions, and anything scoped to one session
+- write in the same language as the excerpt
+Suggested category: {target}
+
+Excerpt:
+{state}
+
+Memory entries:

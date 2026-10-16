@@ -1,0 +1,30 @@
+{
+  "strong": [
+    "^I said\\b",
+    "^I told you\\b",
+    "we already discussed",
+    "^that'?s not what I",
+    "^non ho detto",
+    "^te l'ho gi\\u00e0 detto",
+    "^non fare cos",
+    "^avevo detto",
+    "^ricordati che",
+    "^si ricordi che"
+  ],
+  "weak": [
+    "^no[,\\.\\s!]",
+    "^wrong[,\\.\\s!]",
+    "^actually[,\\.\\s]",
+    "^stop[,\\.\\s!]",
+    "^no[,\\.\\s]",
+    "^sbagliato[,\\.\\s!]",
+    "^in realt\\u00e0[,\\.\\s]",
+    "^fermati[,\\.\\s!]"
+  ],
+  "negative": [
+    "^no worries",
+    "^no problem",
+    "^nessun problema",
+    "^figurati"
+  ]
+}

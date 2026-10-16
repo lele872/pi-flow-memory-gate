@@ -1,0 +1,10 @@
+{
+  "same_fact": {
+    "type": "noul",
+    "instructions": "Do these two memory entries state the same underlying fact, rule, or lesson (even if worded differently)?"
+  },
+  "first_more_complete": {
+    "type": "noul",
+    "instructions": "Does the first entry contain strictly more useful concrete detail than the second?"
+  }
+}
