@@ -12,7 +12,9 @@
     "agent-memory"
   ],
   "pi": {
-    "extensions": ["./src/index.ts"]
+    "extensions": [
+      "./src/index.ts"
+    ]
   },
   "files": [
     "src",
@@ -23,7 +25,8 @@
     "gate-synth-prompt.txt",
     "README.md",
     "README.it.md",
-    "LICENSE"
+    "LICENSE",
+    "memory-gate-config.example.json"
   ],
   "scripts": {
     "lint": "eslint src/",
