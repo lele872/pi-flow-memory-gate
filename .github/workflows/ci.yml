@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check and lint
+        run: npm run check
+
+      - name: Format check
+        run: npx prettier --check src/
+
+      - name: Validate JSON config files
+        run: |
+          node -e "
+            const files = [
+              'gate-questions.json',
+              'consolidate-questions.json',
+              'consolidate-pair-questions.json',
+              'trigger-patterns.json',
+              'memory-gate-config.example.json',
+              'package.json',
+            ];
+            for (const f of files) {
+              JSON.parse(require('fs').readFileSync(f, 'utf8'));
+              console.log('ok', f);
+            }
+          "
